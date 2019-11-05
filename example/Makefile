@@ -1,4 +1,4 @@
-ANTLRJAR = /usr/local/lib/antlr-4.7-complete.jar
+ANTLRJAR = /home/michael/Documents/antlr-4.7.2-complete.jar
 
 export CLASSPATH := .:$(ANTLRJAR):${CLASSPATH}
 antlr4 = java -jar $(ANTLRJAR)
