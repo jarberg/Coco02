@@ -1,6 +1,12 @@
-antlr4 = java -jar /home/michael/Documents/antlr-4.7.2-complete.jar
+
+ANTLRJAR = /home/michael/Documents/antlr-4.7.2-complete.jar
+export CLASSPATH := .:$(ANTLRJAR):${CLASSPATH}
+antlr4 = java -jar $(ANTLRJAR)
+grun   = java org.antlr.v4.gui.TestRig
+
 SRCFILES = main.java AST.java
 GENERATED = cocoListener.java cocoBaseListener.java cocoParser.java cocoBaseVisitor.java cocoVisitor.java cocoLexer.java
+
 
 all:
 	make main.class
